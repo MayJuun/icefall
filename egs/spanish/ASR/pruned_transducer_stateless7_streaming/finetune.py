@@ -59,7 +59,8 @@ import sentencepiece as spm
 import torch
 import torch.multiprocessing as mp
 import torch.nn as nn
-from asr_datamodule import CommonVoiceAsrDataModule
+# from asr_datamodule import CommonVoiceAsrDataModule
+from spanish_asr_datamodule import SpanishAsrDataModule
 from decoder import Decoder
 from joiner import Joiner
 from lhotse.cut import Cut
@@ -1127,9 +1128,11 @@ def run(rank, world_size, args):
     if params.inf_check:
         register_inf_check_hooks(model)
 
-    commonvoice = CommonVoiceAsrDataModule(args)
+    # commonvoice = CommonVoiceAsrDataModule(args)
+    spanish = SpanishAsrDataModule(args)
 
-    train_cuts = commonvoice.train_cuts()
+    # train_cuts = commonvoice.train_cuts()
+    train_cuts = spanish.train_cuts()
 
     def remove_short_and_long_utt(c: Cut):
         # Keep only utterances with duration between 1 second and 20 seconds
@@ -1177,12 +1180,19 @@ def run(rank, world_size, args):
     else:
         sampler_state_dict = None
 
-    train_dl = commonvoice.train_dataloaders(
+    # train_dl = commonvoice.train_dataloaders(
+    #     train_cuts, sampler_state_dict=sampler_state_dict
+    # )
+
+    # valid_cuts = commonvoice.dev_cuts()
+    # valid_dl = commonvoice.valid_dataloaders(valid_cuts)
+
+    train_dl = spanish.train_dataloaders(
         train_cuts, sampler_state_dict=sampler_state_dict
     )
 
-    valid_cuts = commonvoice.dev_cuts()
-    valid_dl = commonvoice.valid_dataloaders(valid_cuts)
+    valid_cuts = spanish.dev_cuts()
+    valid_dl = spanish.valid_dataloaders(valid_cuts)
 
     if not params.print_diagnostics:
         scan_pessimistic_batches_for_oom(
@@ -1321,9 +1331,10 @@ def scan_pessimistic_batches_for_oom(
 
 def main():
     parser = get_parser()
-    CommonVoiceAsrDataModule.add_arguments(
-        parser
-    )  # you may replace this with your own dataset
+    # CommonVoiceAsrDataModule.add_arguments(
+    #     parser
+    # )  # you may replace this with your own dataset
+    SpanishAsrDataModule.add_arguments(parser)
     args = parser.parse_args()
     args.exp_dir = Path(args.exp_dir)
 
