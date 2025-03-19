@@ -1,6 +1,3 @@
-(asr_env) grey_faulkenberry_mayjuun_com@asr-training:~/asr-projects/icefall/egs/commonvoice/ASR/data$ ls
-fbank
-(asr_env) grey_faulkenberry_mayjuun_com@asr-training:~/asr-projects/icefall/egs/commonvoice/ASR/data$ cd fbank
 (asr_env) grey_faulkenberry_mayjuun_com@asr-training:~/asr-projects/icefall/egs/commonvoice/ASR/data/fbank$ ls
 cuts_test_spanish.jsonl.gz  cuts_train_spanish.jsonl.gz  cuts_valid_spanish.jsonl.gz
 (asr_env) grey_faulkenberry_mayjuun_com@asr-training:~/asr-projects/icefall/egs/commonvoice/ASR/data/fbank$ ls -al

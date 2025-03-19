@@ -14,5 +14,5 @@ do_finetune=1
   --master-port 13024 \
   --finetune-ckpt ~/asr-projects/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/exp/pretrained.pt \
   --max-duration 1000 \
-  --train-cuts /mnt/data/fbank_features/train_manifest/cuts.jzon.gz \
-  --valid-cuts /mnt/data/fbank_features/validation_manifest/cuts.jzon.gz
+  --train-cuts data/fbank/cuts_train_spanish.json.gz \
+  --valid-cuts data/fbank/cuts_validation_spanish.json.gz
