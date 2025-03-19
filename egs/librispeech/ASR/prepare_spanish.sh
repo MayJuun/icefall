@@ -14,7 +14,7 @@ stop_stage=5
 
 # Directory where your Spanish data resides.
 # E.g., if you have /path/to/es-datasets with train/dev/test subfolders, unify CSV, etc.
-es_data_dir=/absolute/path/to/es-datasets
+es_data_dir=/home/grey_faulkenberry_mayjuun_com/asr-projects/es-datasets
 
 # A CSV containing info about every clip (audio_path, transcript, split, etc.).
 # That file is your "unified_manifest.csv" with 1 row per segment.
