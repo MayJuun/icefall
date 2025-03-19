@@ -657,7 +657,8 @@ class Zipformer2EncoderLayer(nn.Module):
         )
 
         # TODO: remove it
-        self.bypass_scale = nn.Parameter(torch.full((embed_dim,), 0.5))
+        # self.bypass_scale = nn.Parameter(torch.full((embed_dim,), 0.5))
+        self.bypass_scale = nn.Parameter(torch.tensor(0.5))
 
         self.norm = BiasNorm(embed_dim)
 
