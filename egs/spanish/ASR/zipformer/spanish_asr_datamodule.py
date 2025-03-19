@@ -61,19 +61,19 @@ class SpanishAsrDataModule:
         group.add_argument(
             "--train-cuts",
             type=str,
-            default="cuts_train_spanish.jsonl.gz",
+            default="cuts_train_spanish.json.gz",
             help="Filename for training cuts within manifest-dir",
         )
         group.add_argument(
             "--valid-cuts",
             type=str,
-            default="cuts_valid_spanish.jsonl.gz", 
+            default="cuts_valid_spanish.json.gz", 
             help="Filename for validation cuts within manifest-dir",
         )
         group.add_argument(
             "--test-cuts",
             type=str,
-            default="cuts_test_spanish.jsonl.gz",
+            default="cuts_test_spanish.json.gz",
             help="Filename for test cuts within manifest-dir",
         )
         group.add_argument(
