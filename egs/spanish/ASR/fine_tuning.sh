@@ -8,11 +8,11 @@ do_finetune=1
   --exp-dir zipformer/exp_spanish_finetune${do_finetune}_mux${use_mux} \
   --use-fp16 1 \
   --base-lr 0.003 \
-  --bpe-model ~/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/data/lang_bpe_500/bpe.model \
+  --bpe-model ~/asr-projects/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/data/lang_bpe_500/bpe.model \
   --do-finetune ${do_finetune} \
   --use-mux ${use_mux} \
   --master-port 13024 \
-  --finetune-ckpt ~/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/pretrained.pt \
+  --finetune-ckpt ~/asr-projects/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/exp/pretrained.pt \
   --max-duration 1000 \
-  --train-cuts data/fbank/cuts_train_spanish.jsonl.gz \
-  --valid-cuts data/fbank/cuts_valid_spanish.jsonl.gz
+  --train-cuts /mnt/data/fbank_features/train_manifest/cuts.jzon.gz \
+  --valid-cuts /mnt/data/fbank_features/validation_manifest/cuts.jzon.gz
