@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ./zipformer/decode_spanish.py \
   --epoch 30 \
   --avg 1 \
