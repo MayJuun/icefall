@@ -108,9 +108,6 @@ import sentencepiece as spm
 import torch
 import torch.nn as nn
 from spanish_asr_datamodule import SpanishAsrDataModule
-from fix_zipformer_scaling import patch_zipformer_encoder_layer
-from zipformer import Zipformer2EncoderLayer
-patch_zipformer_encoder_layer(Zipformer2EncoderLayer)
 from beam_search import (
     beam_search,
     fast_beam_search_nbest,
