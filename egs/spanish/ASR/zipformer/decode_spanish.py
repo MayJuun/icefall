@@ -197,7 +197,7 @@ def get_parser():
     parser.add_argument(
         "--bpe-model",
         type=str,
-        default="~/asr-projects/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/data/lang_bpe_500/bpe.model",
+        default="/home/grey_faulkenberry_mayjuun_com/asr-projects/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/data/lang_bpe_500/bpe.model",
         help="Path to the BPE model",
     )
 
