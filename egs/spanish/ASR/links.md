@@ -8,3 +8,7 @@ lrwxrwxrwx 1 grey_faulkenberry_mayjuun_com grey_faulkenberry_mayjuun_com   43 Ma
 lrwxrwxrwx 1 grey_faulkenberry_mayjuun_com grey_faulkenberry_mayjuun_com   47 Mar 18 20:49 cuts_train_spanish.jsonl.gz -> /mnt/data/fbank_features/train/cuts_sp.jsonl.gz
 lrwxrwxrwx 1 grey_faulkenberry_mayjuun_com grey_faulkenberry_mayjuun_com   44 Mar 18 20:49 cuts_valid_spanish.jsonl.gz -> /mnt/data/fbank_features/valid/cuts.jsonl.gz
 (asr_env) grey_faulkenberry_mayjuun_com@asr-training:~/asr-projects/icefall/egs/commonvoice/ASR/data/fbank$ 
+
+ln -sf /mnt/data/fbank_features/test_manifest/cuts_test_spanish_fixed.jsonl.gz cuts_test_spanish.jsonl.gz
+ln -sf /mnt/data/fbank_features/train_manifest/cuts_train_spanish_fixed.jsonl.gz cuts_train_spanish.jsonl.gz
+ln -sf /mnt/data/fbank_features/validation_manifest/cuts_valid_spanish_fixed.jsonl.gz cuts_valid_spanish.jsonl.gz

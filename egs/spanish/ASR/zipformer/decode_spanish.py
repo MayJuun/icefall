@@ -445,6 +445,23 @@ def decode_one_batch(
             value=LOG_EPS,
         )
 
+    if src_key_padding_mask is not None:
+        # Get the actual batch_size and seq_len from the feature tensor
+        batch_size, seq_len = feature.shape[0], feature.shape[1]
+        
+        # Create a new correctly-sized mask
+        correct_mask = torch.zeros((batch_size, seq_len), 
+                                dtype=torch.bool, 
+                                device=src_key_padding_mask.device)
+        
+        # Transfer values from the original mask where dimensions overlap
+        rows = min(batch_size, src_key_padding_mask.shape[0])
+        cols = min(seq_len, src_key_padding_mask.shape[1])
+        correct_mask[:rows, :cols] = src_key_padding_mask[:rows, :cols]
+        
+        # Replace the original mask
+        src_key_padding_mask = correct_mask
+
     encoder_out, encoder_out_lens = model.forward_encoder(feature, feature_lens)
 
     hyps = []
