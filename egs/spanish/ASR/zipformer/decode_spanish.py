@@ -369,8 +369,7 @@ def get_parser():
         Used only when --decoding-method is modified_beam_search and
         modified_beam_search_LODR.
         """,
-    )
-    
+    )    
     add_model_arguments(parser)
 
     return parser
@@ -1021,7 +1020,7 @@ def main():
     dev_cuts = spanish_asr.dev_cuts()
 
     test_dl = spanish_asr.test_dataloaders(test_cuts)
-    dev_dl = spanish_asr.dev_dataloaders(dev_cuts)
+    dev_dl = spanish_asr.valid_dataloaders(dev_cuts)
 
     test_sets = ["dev", "test"]
     test_dl = [dev_dl, test_dl]

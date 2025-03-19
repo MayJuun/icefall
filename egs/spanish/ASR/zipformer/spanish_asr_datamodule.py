@@ -9,7 +9,7 @@ from typing import Any, Dict, Optional
 
 import torch
 from lhotse import CutSet, Fbank, FbankConfig, load_manifest, load_manifest_lazy
-from lhotse.dataset import (
+from lhotse.dataset import (  # noqa F401 for PrecomputedFeatures
     CutConcatenate,
     CutMix,
     DynamicBucketingSampler,
@@ -18,7 +18,7 @@ from lhotse.dataset import (
     SimpleCutSampler,
     SpecAugment,
 )
-from lhotse.dataset.input_strategies import (
+from lhotse.dataset.input_strategies import (  # noqa F401 For AudioSamples
     AudioSamples,
     OnTheFlyFeatures,
 )
@@ -40,6 +40,20 @@ class SpanishAsrDataModule:
     """
     DataModule for Spanish ASR experiments.
     This module is designed to work with Spanish speech data from various sources.
+
+    It assumes there is always one train and valid dataloader,
+    but there can be multiple test dataloaders (e.g. CommonVoice test-clean
+    and test-other).
+
+    It contains all the common data pipeline modules used in ASR
+    experiments, e.g.:
+    - dynamic batch size,
+    - bucketing samplers,
+    - cut concatenation,
+    - augmentation,
+    - on-the-fly feature extraction
+
+    This class should be derived for specific corpora used in ASR tasks.
     """
 
     def __init__(self, args: argparse.Namespace):
@@ -51,6 +65,12 @@ class SpanishAsrDataModule:
             title="Spanish ASR data related options",
             description="These options are used for the preparation of "
             "PyTorch DataLoaders from Lhotse CutSet's for Spanish ASR.",
+        )
+        group.add_argument(
+            "--language",
+            type=str,
+            default="es",
+            help="""Language of Multiple Spanish Corpora""",
         )
         group.add_argument(
             "--manifest-dir",
@@ -81,7 +101,7 @@ class SpanishAsrDataModule:
             type=int,
             default=200.0,
             help="Maximum pooled recordings duration (seconds) in a "
-            "single batch. Reduce if it causes CUDA OOM.",
+            "single batch. You can reduce it if it causes CUDA OOM.",
         )
         group.add_argument(
             "--bucketing-sampler",
@@ -148,6 +168,7 @@ class SpanishAsrDataModule:
             "field: batch['supervisions']['cut'] with the cuts that "
             "were used to construct it.",
         )
+
         group.add_argument(
             "--num-workers",
             type=int,
@@ -155,12 +176,14 @@ class SpanishAsrDataModule:
             help="The number of training dataloader workers that "
             "collect the batches.",
         )
+
         group.add_argument(
             "--enable-spec-aug",
             type=str2bool,
             default=True,
             help="When enabled, use SpecAugment for training dataset.",
         )
+
         group.add_argument(
             "--spec-aug-time-warp-factor",
             type=int,
@@ -170,6 +193,7 @@ class SpanishAsrDataModule:
             "Larger values mean more warping. "
             "A value less than 1 means to disable time warp.",
         )
+
         group.add_argument(
             "--enable-musan",
             type=str2bool,
@@ -177,17 +201,12 @@ class SpanishAsrDataModule:
             help="When enabled, select noise from MUSAN and mix it"
             "with training dataset. ",
         )
+
         group.add_argument(
             "--input-strategy",
             type=str,
             default="PrecomputedFeatures",
             help="AudioSamples or PrecomputedFeatures",
-        )
-        group.add_argument(
-            "--batch-size",
-            type=int,
-            default=None,
-            help="The batch size for dataloader. None means using the bucketing sampler.",
         )
 
     def train_dataloaders(
@@ -218,6 +237,9 @@ class SpanishAsrDataModule:
                 f"Using cut concatenation with duration factor "
                 f"{self.args.duration_factor} and gap {self.args.gap}."
             )
+            # Cut concatenation should be the first transform in the list,
+            # so that if we e.g. mix noise in, it will fill the gaps between
+            # different utterances.
             transforms = [
                 CutConcatenate(
                     duration_factor=self.args.duration_factor, gap=self.args.gap
@@ -228,6 +250,9 @@ class SpanishAsrDataModule:
         if self.args.enable_spec_aug:
             logging.info("Enable SpecAugment")
             logging.info(f"Time warp factor: {self.args.spec_aug_time_warp_factor}")
+            # Set the value of num_frame_masks according to Lhotse's version.
+            # In different Lhotse's versions, the default of num_frame_masks is
+            # different.
             num_frame_masks = 10
             num_frame_masks_parameter = inspect.signature(
                 SpecAugment.__init__
@@ -256,6 +281,16 @@ class SpanishAsrDataModule:
         )
 
         if self.args.on_the_fly_feats:
+            # NOTE: the PerturbSpeed transform should be added only if we
+            # remove it from data prep stage.
+            # Add on-the-fly speed perturbation; since originally it would
+            # have increased epoch size by 3, we will apply prob 2/3 and use
+            # 3x more epochs.
+            # Speed perturbation probably should come first before
+            # concatenation, but in principle the transforms order doesn't have
+            # to be strict (e.g. could be randomized)
+            # transforms = [PerturbSpeed(factors=[0.9, 1.1], p=2/3)] + transforms   # noqa
+            # Drop feats to be on the safe side.
             train = K2SpeechRecognitionDataset(
                 cut_transforms=transforms,
                 input_strategy=OnTheFlyFeatures(Fbank(FbankConfig(num_mel_bins=80))),
@@ -281,18 +316,21 @@ class SpanishAsrDataModule:
                 max_duration=self.args.max_duration,
                 shuffle=self.args.shuffle,
             )
+        logging.info("About to create train dataloader")
 
         if sampler_state_dict is not None:
             logging.info("Loading sampler state dict")
             train_sampler.load_state_dict(sampler_state_dict)
 
+        # 'seed' is derived from the current random state, which will have
+        # previously been set in the main process.
         seed = torch.randint(0, 100000, ()).item()
         worker_init_fn = _SeedWorkers(seed)
 
         train_dl = DataLoader(
             train,
             sampler=train_sampler,
-            batch_size=self.args.batch_size,
+            batch_size=None,
             num_workers=self.args.num_workers,
             persistent_workers=False,
             worker_init_fn=worker_init_fn,
@@ -300,7 +338,7 @@ class SpanishAsrDataModule:
 
         return train_dl
 
-    def dev_dataloaders(self, cuts_valid: CutSet) -> DataLoader:
+    def valid_dataloaders(self, cuts_valid: CutSet) -> DataLoader:
         transforms = []
         if self.args.concatenate_cuts:
             transforms = [
@@ -330,7 +368,7 @@ class SpanishAsrDataModule:
         valid_dl = DataLoader(
             validate,
             sampler=valid_sampler,
-            batch_size=self.args.batch_size,
+            batch_size=None,
             num_workers=2,
             persistent_workers=False,
         )
@@ -355,7 +393,7 @@ class SpanishAsrDataModule:
         logging.debug("About to create test dataloader")
         test_dl = DataLoader(
             test,
-            batch_size=self.args.batch_size,
+            batch_size=None,
             sampler=sampler,
             num_workers=self.args.num_workers,
         )

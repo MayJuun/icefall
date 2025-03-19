@@ -122,6 +122,7 @@ def set_batch_count(model: Union[nn.Module, DDP], batch_count: float) -> None:
         if hasattr(module, "name"):
             module.name = name
 
+
 def add_model_arguments(parser: argparse.ArgumentParser):
     parser.add_argument(
         "--num-encoder-layers",
@@ -137,18 +138,11 @@ def add_model_arguments(parser: argparse.ArgumentParser):
         help="Downsampling factor for each stack of encoder layers.",
     )
 
-    # parser.add_argument(
-    #     "--feedforward-dim",
-    #     type=str,
-    #     default="512,768,1024,1536,1024,768",
-    #     help="Feedforward dimension of the zipformer encoder layers, per stack, comma separated.",
-    # )
-
     parser.add_argument(
         "--feedforward-dim",
         type=str,
-        default="1024,1024,2048,2048,1024,1024",
-        help="Feedforward dimensions for French model fine-tuning"
+        default="512,768,1024,1536,1024,768",
+        help="Feedforward dimension of the zipformer encoder layers, per stack, comma separated.",
     )
 
     parser.add_argument(
@@ -158,18 +152,11 @@ def add_model_arguments(parser: argparse.ArgumentParser):
         help="Number of attention heads in the zipformer encoder layers: a single int or comma-separated list.",
     )
 
-    # parser.add_argument(
-    #     "--encoder-dim",
-    #     type=str,
-    #     default="192,256,384,512,384,256",
-    #     help="Embedding dimension in encoder stacks: a single int or comma-separated list.",
-    # )
-
     parser.add_argument(
         "--encoder-dim",
         type=str,
-        default="384,384,384,384,384,384",
-        help="Encoder dimensions for French model fine-tuning"
+        default="192,256,384,512,384,256",
+        help="Embedding dimension in encoder stacks: a single int or comma-separated list.",
     )
 
     parser.add_argument(
@@ -200,34 +187,20 @@ def add_model_arguments(parser: argparse.ArgumentParser):
         help="Positional-encoding embedding dimension",
     )
 
-    # parser.add_argument(
-    #     "--encoder-unmasked-dim",
-    #     type=str,
-    #     default="192,192,256,256,256,192",
-    #     help="Unmasked dimensions in the encoders, relates to augmentation during training.  "
-    #     "A single int or comma-separated list.  Must be <= each corresponding encoder_dim.",
-    # )
-
     parser.add_argument(
         "--encoder-unmasked-dim",
         type=str,
-        default="384,384,384,384,384,384",
-        help="Encoder unmasked dimensions for French model fine-tuning"
+        default="192,192,256,256,256,192",
+        help="Unmasked dimensions in the encoders, relates to augmentation during training.  "
+        "A single int or comma-separated list.  Must be <= each corresponding encoder_dim.",
     )
-
-    # parser.add_argument(
-    #     "--cnn-module-kernel",
-    #     type=str,
-    #     default="31,31,15,15,15,31",
-    #     help="Sizes of convolutional kernels in convolution modules in each encoder stack: "
-    #     "a single int or comma-separated list.",
-    # )
 
     parser.add_argument(
         "--cnn-module-kernel",
         type=str,
-        default="31,31,31,31,31,31",
-        help="CNN kernel sizes for French model fine-tuning"
+        default="31,31,15,15,15,31",
+        help="Sizes of convolutional kernels in convolution modules in each encoder stack: "
+        "a single int or comma-separated list.",
     )
 
     parser.add_argument(
