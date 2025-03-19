@@ -144,8 +144,17 @@ class AsrModel(nn.Module):
         # logging.info(f"Memory allocated after encoder_embed: {torch.cuda.memory_allocated() // 1000000}M")
 
         src_key_padding_mask = make_pad_mask(x_lens)
+        batch_size = x_lens.size(0)
         x = x.permute(1, 0, 2)  # (N, T, C) -> (T, N, C)
-
+        x_seq_len = x.size(0)  # Time dimension after permute
+        if src_key_padding_mask.size(1) != x_seq_len:
+            # Resize to match the expected sequence length
+            new_mask = torch.zeros(batch_size, x_seq_len, dtype=torch.bool, device=src_key_padding_mask.device)
+            # Copy values up to the smaller of the two dimensions
+            min_len = min(src_key_padding_mask.size(1), x_seq_len)
+            new_mask[:, :min_len] = src_key_padding_mask[:, :min_len]
+            src_key_padding_mask = new_mask
+        
         encoder_out, encoder_out_lens = self.encoder(x, x_lens, src_key_padding_mask)
 
         encoder_out = encoder_out.permute(1, 0, 2)  # (T, N, C) ->(N, T, C)
