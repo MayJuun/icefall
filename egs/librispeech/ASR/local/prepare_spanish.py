@@ -39,13 +39,8 @@ def main():
             # full audio path
             audio_path = os.path.join(args.data_dir, audio_rel_path)
 
-            rec = Recording(
-                id=recording_id,
-                sampling_rate=16000,  # or read from CSV if it differs
-                num_channels=1,
-                duration=duration,
-                sources=[{"type": "file", "channels": [0], "source": audio_path}],
-            )
+            rec = Recording.from_file(path=audio_path, recording_id=recording_id)
+
             sup = SupervisionSegment(
                 id=recording_id,
                 recording_id=recording_id,
