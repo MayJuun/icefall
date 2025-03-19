@@ -373,6 +373,34 @@ def get_parser():
         modified_beam_search_LODR.
         """,
     )
+    parser.add_argument(
+        "--encoder-dim",
+        type=str,
+        default="384,384,384,384,384,384",
+        help="Encoder dimensions for French model fine-tuning"
+    )
+
+    parser.add_argument(
+        "--encoder-unmasked-dim",
+        type=str,
+        default="384,384,384,384,384,384",
+        help="Encoder unmasked dimensions for French model fine-tuning"
+    )
+
+    parser.add_argument(
+        "--cnn-module-kernel",
+        type=str,
+        default="31,31,31,31,31,31",
+        help="CNN kernel sizes for French model fine-tuning"
+    )
+
+    parser.add_argument(
+        "--feedforward-dim",
+        type=str,
+        default="1024,1024,2048,2048,1024,1024",
+        help="Feedforward dimensions for French model fine-tuning"
+    )
+    
     add_model_arguments(parser)
 
     return parser
