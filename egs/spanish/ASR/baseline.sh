@@ -1,10 +1,16 @@
 #!/bin/bash
 
 ./zipformer/decode_spanish.py \
-  --epoch 30 \
+  --epoch 99 \
   --avg 1 \
-  --exp-dir ~/asr-projects/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/exp \
-  --use-averaged-model 0 \
-  --max-duration 1000 \
-  --decoding-method greedy_search \
-  --bpe-model ~/asr-projects/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/data/lang_bpe_500/bpe.model \
+  --use-averaged-model false \
+  --exp-dir /path/to/french_checkpoint/exp \
+  --num-encoder-layers "2,4,3,2,4" \
+  --downsampling-factor "1,2,4,8,2" \
+  --feedforward-dim "1024,1024,2048,2048,1024" \
+  --num-heads "8,8,8,8,8" \
+  --encoder-dim "384,384,384,384,384" \
+  --encoder-unmasked-dim "256,256,256,256,256" \
+  --cnn-module-kernel "31,31,31,31,31" \
+  --decoder-dim 512 \
+  --joiner-dim 512
