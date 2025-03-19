@@ -1,0 +1,12 @@
+./zipformer/decode_spanish.py \
+  --epoch 30 \
+  --avg 1 \
+  --exp-dir ~/asr-projects/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/exp \
+  --use-averaged-model 0 \
+  --max-duration 1000 \
+  --decoding-method greedy_search \
+  --bpe-model ~/asr-projects/models/icefall-asr-commonvoice-fr-pruned-transducer-stateless7-streaming-2023-04-02/data/lang_bpe_500/bpe.model \
+  --encoder-dim "384,384,384,384,384,384" \
+  --encoder-unmasked-dim "384,384,384,384,384,384" \
+  --cnn-module-kernel "31,31,31,31,31,31" \
+  --feedforward-dim "1024,1024,2048,2048,1024,1024" 

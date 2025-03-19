@@ -1,0 +1,2141 @@
+{
+    "encoder_dims": [
+      512,
+      384
+    ],
+    "feedforward_dims": [],
+    "kernel_sizes": [],
+    "attention_dims": [],
+    "num_heads": [],
+    "layer_structure": {
+      "0": {
+        "num_heads": 0
+      },
+      "1": {
+        "num_heads": 0
+      },
+      "2": {
+        "num_heads": 0
+      },
+      "3": {
+        "num_heads": 0
+      },
+      "4": {
+        "num_heads": 0
+      }
+    },
+    "tensor_shapes": {
+      "encoder.encoder_embed.conv.0.weight": [
+        8,
+        1,
+        3,
+        3
+      ],
+      "encoder.encoder_embed.conv.0.bias": [
+        8
+      ],
+      "encoder.encoder_embed.conv.1.count": [],
+      "encoder.encoder_embed.conv.3.weight": [
+        32,
+        8,
+        3,
+        3
+      ],
+      "encoder.encoder_embed.conv.3.bias": [
+        32
+      ],
+      "encoder.encoder_embed.conv.4.count": [],
+      "encoder.encoder_embed.conv.6.weight": [
+        128,
+        32,
+        3,
+        3
+      ],
+      "encoder.encoder_embed.conv.6.bias": [
+        128
+      ],
+      "encoder.encoder_embed.conv.7.count": [],
+      "encoder.encoder_embed.out.weight": [
+        384,
+        2432
+      ],
+      "encoder.encoder_embed.out.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.0.bypass_scale": [],
+      "encoder.encoders.0.layers.0.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.0.layers.0.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.0.layers.0.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.0.layers.0.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.0.layers.0.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.0.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.0.layers.0.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.0.layers.0.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.0.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.0.layers.0.feed_forward1.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.0.layers.0.feed_forward1.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.0.layers.0.feed_forward1.balancer.count": [],
+      "encoder.encoders.0.layers.0.feed_forward1.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.0.layers.0.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.0.feed_forward2.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.0.layers.0.feed_forward2.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.0.layers.0.feed_forward2.balancer.count": [],
+      "encoder.encoders.0.layers.0.feed_forward2.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.0.layers.0.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.0.feed_forward3.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.0.layers.0.feed_forward3.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.0.layers.0.feed_forward3.balancer.count": [],
+      "encoder.encoders.0.layers.0.feed_forward3.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.0.layers.0.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.0.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.0.layers.0.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.0.layers.0.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.0.layers.0.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.0.layers.0.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.0.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.0.layers.0.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.0.layers.0.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.0.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.0.layers.0.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.0.layers.0.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.0.layers.0.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.0.layers.0.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.0.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.0.layers.0.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.0.layers.0.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.0.norm_final.eps": [],
+      "encoder.encoders.0.layers.0.balancer.count": [],
+      "encoder.encoders.0.layers.1.bypass_scale": [],
+      "encoder.encoders.0.layers.1.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.0.layers.1.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.0.layers.1.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.0.layers.1.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.0.layers.1.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.1.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.0.layers.1.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.0.layers.1.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.1.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.0.layers.1.feed_forward1.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.0.layers.1.feed_forward1.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.0.layers.1.feed_forward1.balancer.count": [],
+      "encoder.encoders.0.layers.1.feed_forward1.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.0.layers.1.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.1.feed_forward2.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.0.layers.1.feed_forward2.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.0.layers.1.feed_forward2.balancer.count": [],
+      "encoder.encoders.0.layers.1.feed_forward2.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.0.layers.1.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.1.feed_forward3.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.0.layers.1.feed_forward3.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.0.layers.1.feed_forward3.balancer.count": [],
+      "encoder.encoders.0.layers.1.feed_forward3.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.0.layers.1.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.1.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.0.layers.1.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.0.layers.1.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.0.layers.1.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.0.layers.1.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.1.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.0.layers.1.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.0.layers.1.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.1.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.0.layers.1.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.0.layers.1.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.0.layers.1.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.0.layers.1.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.1.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.0.layers.1.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.0.layers.1.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.0.layers.1.norm_final.eps": [],
+      "encoder.encoders.0.layers.1.balancer.count": [],
+      "encoder.encoders.1.downsample.query": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.bypass_scale": [],
+      "encoder.encoders.1.encoder.layers.0.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.1.encoder.layers.0.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.1.encoder.layers.0.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.1.encoder.layers.0.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward1.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward1.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward1.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.0.feed_forward1.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward2.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward2.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward2.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.0.feed_forward2.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward3.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward3.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward3.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.0.feed_forward3.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.0.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.1.encoder.layers.0.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.1.encoder.layers.0.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.1.encoder.layers.0.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.1.encoder.layers.0.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.0.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.0.norm_final.eps": [],
+      "encoder.encoders.1.encoder.layers.0.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.1.bypass_scale": [],
+      "encoder.encoders.1.encoder.layers.1.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.1.encoder.layers.1.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.1.encoder.layers.1.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.1.encoder.layers.1.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward1.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward1.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward1.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.1.feed_forward1.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward2.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward2.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward2.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.1.feed_forward2.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward3.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward3.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward3.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.1.feed_forward3.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.1.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.1.encoder.layers.1.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.1.encoder.layers.1.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.1.encoder.layers.1.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.1.encoder.layers.1.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.1.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.1.norm_final.eps": [],
+      "encoder.encoders.1.encoder.layers.1.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.2.bypass_scale": [],
+      "encoder.encoders.1.encoder.layers.2.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.1.encoder.layers.2.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.1.encoder.layers.2.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.1.encoder.layers.2.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward1.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward1.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward1.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.2.feed_forward1.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward2.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward2.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward2.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.2.feed_forward2.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward3.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward3.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward3.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.2.feed_forward3.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.2.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.1.encoder.layers.2.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.1.encoder.layers.2.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.1.encoder.layers.2.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.1.encoder.layers.2.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.2.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.2.norm_final.eps": [],
+      "encoder.encoders.1.encoder.layers.2.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.3.bypass_scale": [],
+      "encoder.encoders.1.encoder.layers.3.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.1.encoder.layers.3.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.1.encoder.layers.3.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.1.encoder.layers.3.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward1.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward1.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward1.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.3.feed_forward1.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward2.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward2.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward2.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.3.feed_forward2.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward3.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward3.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward3.balancer.count": [],
+      "encoder.encoders.1.encoder.layers.3.feed_forward3.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.1.encoder.layers.3.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.1.encoder.layers.3.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.1.encoder.layers.3.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.1.encoder.layers.3.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.1.encoder.layers.3.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.1.encoder.layers.3.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.1.encoder.layers.3.norm_final.eps": [],
+      "encoder.encoders.1.encoder.layers.3.balancer.count": [],
+      "encoder.encoders.1.upsample.bias": [
+        2,
+        384
+      ],
+      "encoder.encoders.1.out_combiner.weight1": [],
+      "encoder.encoders.2.downsample.query": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.bypass_scale": [],
+      "encoder.encoders.2.encoder.layers.0.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.2.encoder.layers.0.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.2.encoder.layers.0.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.2.encoder.layers.0.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward1.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward1.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward1.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.0.feed_forward1.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward2.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward2.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward2.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.0.feed_forward2.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward3.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward3.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward3.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.0.feed_forward3.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.0.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.2.encoder.layers.0.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.2.encoder.layers.0.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.2.encoder.layers.0.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.2.encoder.layers.0.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.0.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.0.norm_final.eps": [],
+      "encoder.encoders.2.encoder.layers.0.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.1.bypass_scale": [],
+      "encoder.encoders.2.encoder.layers.1.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.2.encoder.layers.1.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.2.encoder.layers.1.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.2.encoder.layers.1.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward1.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward1.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward1.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.1.feed_forward1.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward2.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward2.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward2.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.1.feed_forward2.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward3.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward3.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward3.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.1.feed_forward3.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.1.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.2.encoder.layers.1.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.2.encoder.layers.1.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.2.encoder.layers.1.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.2.encoder.layers.1.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.1.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.1.norm_final.eps": [],
+      "encoder.encoders.2.encoder.layers.1.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.2.bypass_scale": [],
+      "encoder.encoders.2.encoder.layers.2.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.2.encoder.layers.2.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.2.encoder.layers.2.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.2.encoder.layers.2.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward1.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward1.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward1.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.2.feed_forward1.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward2.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward2.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward2.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.2.feed_forward2.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward3.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward3.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward3.balancer.count": [],
+      "encoder.encoders.2.encoder.layers.2.feed_forward3.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.2.encoder.layers.2.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.2.encoder.layers.2.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.2.encoder.layers.2.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.2.encoder.layers.2.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.2.encoder.layers.2.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.2.encoder.layers.2.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.2.encoder.layers.2.norm_final.eps": [],
+      "encoder.encoders.2.encoder.layers.2.balancer.count": [],
+      "encoder.encoders.2.upsample.bias": [
+        4,
+        384
+      ],
+      "encoder.encoders.2.out_combiner.weight1": [],
+      "encoder.encoders.3.downsample.query": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.bypass_scale": [],
+      "encoder.encoders.3.encoder.layers.0.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.3.encoder.layers.0.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.3.encoder.layers.0.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.3.encoder.layers.0.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward1.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward1.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward1.balancer.count": [],
+      "encoder.encoders.3.encoder.layers.0.feed_forward1.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward2.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward2.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward2.balancer.count": [],
+      "encoder.encoders.3.encoder.layers.0.feed_forward2.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward3.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward3.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward3.balancer.count": [],
+      "encoder.encoders.3.encoder.layers.0.feed_forward3.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.0.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.3.encoder.layers.0.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.3.encoder.layers.0.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.3.encoder.layers.0.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.3.encoder.layers.0.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.3.encoder.layers.0.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.0.norm_final.eps": [],
+      "encoder.encoders.3.encoder.layers.0.balancer.count": [],
+      "encoder.encoders.3.encoder.layers.1.bypass_scale": [],
+      "encoder.encoders.3.encoder.layers.1.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.3.encoder.layers.1.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.3.encoder.layers.1.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.3.encoder.layers.1.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward1.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward1.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward1.balancer.count": [],
+      "encoder.encoders.3.encoder.layers.1.feed_forward1.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward2.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward2.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward2.balancer.count": [],
+      "encoder.encoders.3.encoder.layers.1.feed_forward2.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward3.in_proj.weight": [
+        2048,
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward3.in_proj.bias": [
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward3.balancer.count": [],
+      "encoder.encoders.3.encoder.layers.1.feed_forward3.out_proj.weight": [
+        384,
+        2048
+      ],
+      "encoder.encoders.3.encoder.layers.1.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.3.encoder.layers.1.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.3.encoder.layers.1.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.3.encoder.layers.1.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.3.encoder.layers.1.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.3.encoder.layers.1.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.3.encoder.layers.1.norm_final.eps": [],
+      "encoder.encoders.3.encoder.layers.1.balancer.count": [],
+      "encoder.encoders.3.upsample.bias": [
+        8,
+        384
+      ],
+      "encoder.encoders.3.out_combiner.weight1": [],
+      "encoder.encoders.4.downsample.query": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.bypass_scale": [],
+      "encoder.encoders.4.encoder.layers.0.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.4.encoder.layers.0.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.4.encoder.layers.0.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.4.encoder.layers.0.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward1.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward1.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward1.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.0.feed_forward1.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward2.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward2.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward2.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.0.feed_forward2.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward3.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward3.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward3.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.0.feed_forward3.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.0.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.4.encoder.layers.0.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.4.encoder.layers.0.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.4.encoder.layers.0.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.4.encoder.layers.0.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.0.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.0.norm_final.eps": [],
+      "encoder.encoders.4.encoder.layers.0.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.1.bypass_scale": [],
+      "encoder.encoders.4.encoder.layers.1.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.4.encoder.layers.1.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.4.encoder.layers.1.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.4.encoder.layers.1.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward1.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward1.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward1.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.1.feed_forward1.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward2.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward2.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward2.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.1.feed_forward2.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward3.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward3.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward3.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.1.feed_forward3.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.1.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.4.encoder.layers.1.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.4.encoder.layers.1.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.4.encoder.layers.1.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.4.encoder.layers.1.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.1.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.1.norm_final.eps": [],
+      "encoder.encoders.4.encoder.layers.1.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.2.bypass_scale": [],
+      "encoder.encoders.4.encoder.layers.2.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.4.encoder.layers.2.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.4.encoder.layers.2.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.4.encoder.layers.2.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward1.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward1.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward1.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.2.feed_forward1.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward2.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward2.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward2.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.2.feed_forward2.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward3.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward3.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward3.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.2.feed_forward3.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.2.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.4.encoder.layers.2.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.4.encoder.layers.2.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.4.encoder.layers.2.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.4.encoder.layers.2.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.2.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.2.norm_final.eps": [],
+      "encoder.encoders.4.encoder.layers.2.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.3.bypass_scale": [],
+      "encoder.encoders.4.encoder.layers.3.self_attn.in_proj.weight": [
+        512,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.self_attn.in_proj.bias": [
+        512
+      ],
+      "encoder.encoders.4.encoder.layers.3.self_attn.linear_pos.weight": [
+        32,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.self_attn.out_proj.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.4.encoder.layers.3.self_attn.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.self_attn.in_proj2.weight": [
+        96,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.self_attn.out_proj2.weight": [
+        384,
+        96
+      ],
+      "encoder.encoders.4.encoder.layers.3.self_attn.out_proj2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.pooling.proj.weight": [
+        384,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward1.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward1.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward1.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.3.feed_forward1.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward1.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward2.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward2.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward2.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.3.feed_forward2.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward2.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward3.in_proj.weight": [
+        1024,
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward3.in_proj.bias": [
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward3.balancer.count": [],
+      "encoder.encoders.4.encoder.layers.3.feed_forward3.out_proj.weight": [
+        384,
+        1024
+      ],
+      "encoder.encoders.4.encoder.layers.3.feed_forward3.out_proj.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module1.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module1.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module1.deriv_balancer1.count": [],
+      "encoder.encoders.4.encoder.layers.3.conv_module1.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module1.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module1.deriv_balancer2.count": [],
+      "encoder.encoders.4.encoder.layers.3.conv_module1.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module1.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module2.pointwise_conv1.weight": [
+        768,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module2.pointwise_conv1.bias": [
+        768
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module2.deriv_balancer1.count": [],
+      "encoder.encoders.4.encoder.layers.3.conv_module2.depthwise_conv.weight": [
+        384,
+        1,
+        31
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module2.depthwise_conv.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module2.deriv_balancer2.count": [],
+      "encoder.encoders.4.encoder.layers.3.conv_module2.pointwise_conv2.weight": [
+        384,
+        384,
+        1
+      ],
+      "encoder.encoders.4.encoder.layers.3.conv_module2.pointwise_conv2.bias": [
+        384
+      ],
+      "encoder.encoders.4.encoder.layers.3.norm_final.eps": [],
+      "encoder.encoders.4.encoder.layers.3.balancer.count": [],
+      "encoder.encoders.4.upsample.bias": [
+        2,
+        384
+      ],
+      "encoder.encoders.4.out_combiner.weight1": [],
+      "encoder.skip_modules.4.weight1": [],
+      "encoder.downsample_output.query": [
+        384
+      ],
+      "decoder.embedding.weight": [
+        500,
+        512
+      ],
+      "decoder.conv.weight": [
+        512,
+        4,
+        2
+      ],
+      "joiner.encoder_proj.weight": [
+        512,
+        384
+      ],
+      "joiner.encoder_proj.bias": [
+        512
+      ],
+      "joiner.decoder_proj.weight": [
+        512,
+        512
+      ],
+      "joiner.decoder_proj.bias": [
+        512
+      ],
+      "joiner.output_linear.weight": [
+        500,
+        512
+      ],
+      "joiner.output_linear.bias": [
+        500
+      ],
+      "simple_am_proj.weight": [
+        500,
+        384
+      ],
+      "simple_am_proj.bias": [
+        500
+      ],
+      "simple_lm_proj.weight": [
+        500,
+        512
+      ],
+      "simple_lm_proj.bias": [
+        500
+      ]
+    }
+}
