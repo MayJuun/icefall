@@ -7,6 +7,7 @@ import logging
 from pathlib import Path
 
 from lhotse import Recording, RecordingSet, SupervisionSegment, SupervisionSet, CutSet, fix_manifests
+from lhotse.audio.source import AudioSource
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -65,11 +66,11 @@ def main():
                 num_samples=num_samples,
                 duration=duration,
                 sources=[
-                    {
-                        "type": "file",
-                        "channels": [0],
-                        "source": audio_path
-                    }
+                    AudioSource(
+                        type="file",
+                        channels=[0],
+                        source=audio_path
+                    )
                 ],
             )
 
