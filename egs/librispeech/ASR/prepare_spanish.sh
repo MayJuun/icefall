@@ -97,9 +97,7 @@ if [ ${stage} -le 2 ] && [ ${stop_stage} -ge 2 ]; then
     # You'd have a script local/compute_fbank_spanish.py
     # that loads data/manifests/spa_cuts_{train,dev,test}.jsonl.gz,
     # uses Lhotse to compute FBank, and writes new CutSets with feature info.
-    python3 local/compute_fbank_spanish.py \
-      --in-dir data/manifests \
-      --out-dir data/fbank
+    python3 local/compute_fbank_spanish.py
     touch data/fbank/.spa.done
   fi
 fi
