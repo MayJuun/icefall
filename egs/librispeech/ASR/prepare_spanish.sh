@@ -80,8 +80,8 @@ if [ ${stage} -le 1 ] && [ ${stop_stage} -ge 1 ]; then
       #   data/manifests/musan_recordings_all.jsonl.gz
       # Next, we turn it into cuts + FBank, e.g.:
       python3 local/compute_fbank_musan.py \
-        --recordings-json data/manifests/musan_recordings_all.jsonl.gz \
-        --output-json data/manifests/musan_cuts.jsonl.gz
+        --num-mel-bins 80 \
+        --output-dir data/fbank \
     fi
   else
     log "Skipping MUSAN as use_musan=false"
