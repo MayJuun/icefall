@@ -81,7 +81,7 @@ if [ ${stage} -le 1 ] && [ ${stop_stage} -ge 1 ]; then
       # Next, we turn it into cuts + FBank, e.g.:
       python3 local/compute_fbank_musan.py \
         --num-mel-bins 80 \
-        --output-dir data/fbank \
+        --output-dir data/fbank
     fi
   else
     log "Skipping MUSAN as use_musan=false"
